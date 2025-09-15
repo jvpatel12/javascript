@@ -1,0 +1,27 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+
+
+.container{
+    margin: 75px;
+    padding: 75px;
+    border-style: dashed;
+}
+
+
+h1{
+    font-size: medium;
+    font-style: initial;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    display: flex;
+    font-weight: 100;
+}
+
+.input-containe{
+    margin: auto;
+    background-color: aqua;
+    border-style: dashed;
+}
