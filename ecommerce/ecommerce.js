@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     const cartTotalMessage = document.getElementById('cart-total');
     const totalPriceDisplay = document.getElementById('total-price');
     const checkoutButton = document.getElementById('checkout-btn');
-
+    const removeButton = document.getElementById('remove-btn');
       
     products.forEach((product)=>{
      
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
 productList.addEventListener('click',(e)=>{
+    e.preventDefault();
     if(e.target.tagName==='BUTTON'){
         const productId = parseInt( e.target.getAttribute('data-id'));
         const product = products.find(p=>p.id===productId);
@@ -40,9 +41,16 @@ productList.addEventListener('click',(e)=>{
 
 
     function renderCart(){
+        
         cartItems.innerHTML = "";
 
         let totalPrice  = 0;
+
+        if(cart.length === 0){
+            checkoutButton.disabled = true;
+            cartTotalMessage.classList.add("hidden");
+            totalPriceDisplay.textContent = "0.00";
+        }
 
         if(cart.length >  0){
              emptyCartMessage.classList.add("hidden");
@@ -69,6 +77,12 @@ productList.addEventListener('click',(e)=>{
         renderCart();
     }
 );
+
+  removeButton.addEventListener('click',()=>{
+    cart.pop();
+    
+    renderCart();
+  })
 });
 
  
