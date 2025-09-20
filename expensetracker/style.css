@@ -1,0 +1,121 @@
+/* Reset some default styles */
+body, h1, h2, h3, ul, li, form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(60, 72, 100, 0.15);
+    width: 560px;
+    max-width: 90vw;
+}
+
+h1 {
+    text-align: center;
+    color: #4f46e5;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+input[type="text"], input[type="number"] {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #c7d2fe;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.2s;
+    background: #f1f5f9;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #6366f1;
+    outline: none;
+}
+
+button[type="submit"] {
+    background: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.6rem 1.1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #4338ca;
+}
+
+h2 {
+    color: #334155;
+    margin-bottom: 0.7rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid #e0e7ff;
+    padding-bottom: 0.3rem;
+}
+
+#expense-list {
+    list-style: none;
+    margin-bottom: 1.2rem;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+#expense-list li {
+    background: #f1f5f9;
+    margin-bottom: 0.5rem;
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #475569;
+    font-size: 1rem;
+    box-shadow: 0 1px 4px rgba(99, 102, 241, 0.05);
+    transition: background 0.2s;
+}
+
+#expense-list li:hover {
+    background: #e0e7ff;
+}
+
+#total {
+    background: #6366f1;
+    color: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+#total h3 {
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+#total-amount {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-left: 0.3rem;
+}
